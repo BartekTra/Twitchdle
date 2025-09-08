@@ -1,0 +1,32 @@
+@import "tailwindcss";
+@plugin 'tailwind-scrollbar' {
+  nocompatible: true;
+}
+@font-face {
+  font-family: CustomFontRobotoRegular;
+  src: url("./assets/fonts/RoobertRegularWoff.woff");
+}
+
+@theme {
+  --font-custom-regular: CustomFontRobotoRegular;
+  --color-twitchPurpleDark: #6441a5;
+  --color-twitchPurpleLight: #b9a3e3;
+  --color-twitchBlack: #262626;
+  --color-twitchWhite: #f1f1f1;
+}
+
+@layer utilities {
+  .no-scrollbar-buttons::-webkit-scrollbar-button {
+    display: none;
+    height: 0;
+    width: 0;
+  }
+}
+
+body {
+  @apply min-h-screen;
+}
+
+#root {
+  @apply h-full;
+}
